@@ -15,7 +15,7 @@
                 <li v-for="(task, index) in myArrayTodo" :key="`task-${index}`">
                     <span :class="{sbarrato: task.done}"> {{ task.text }}</span> <!--{{ task['text']}}-->
                 </li>
-                
+            </ul>       
     </div>
 <!--collego V trammite CDN-->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

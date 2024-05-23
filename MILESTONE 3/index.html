@@ -10,14 +10,25 @@
 <body>
     <div id="app">
         <h1>{{ title }}</h1>
+        <!--creo un campo di input testuale e un pulsante "aggiungi"-->
+        <section>
+            <label for="inserisci">inserisci un Tobo</label>
+            <!--v-model Crea un'associazione bidirezionale su un elemento di input del modulo o su un componente.-->
+            <input type="text" id="inserisci" v-model="newTobo">
+            <!--v-on oppure @ per elementi in ascolto-->
+            <button @click="addTobo">Aggiungi</button>
+        </section>
+        <hr>
         <!--Stampare all'interno di una lista HTML un item per ogni todo.-->
+        <section>
             <ul>
                 <li v-for="(task, index) in myArrayTobo" :key="`task-${index}`">
                     <span :class="{sbarrato: task.done}"> {{ task.text }}</span> <!--{{ task['text']}}-->
                     <!--v-on oppure @ per elementi in ascolto-->
                     <button @click="removeTobo(index)">X</button>
                 </li>
-            </ul>   
+            </ul> 
+        </section>   
     </div>
 <!--collego V trammite CDN-->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
