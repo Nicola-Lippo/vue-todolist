@@ -54,5 +54,9 @@ createApp({
             //svuotiamo il campo di input dopo aver pushato l elemento
             this.newTobo = null;
         },
+        trueFalse(indexRicevuto) {
+            console.log('funzioni')
+            this.myArrayTobo[indexRicevuto].done = !this.myArrayTobo[indexRicevuto].done;
+        }
     },
 }).mount('#app');

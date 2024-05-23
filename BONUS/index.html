@@ -24,7 +24,7 @@
         <section>
             <ul>
                 <li v-for="(task, index) in myArrayTobo" :key="`task-${index}`">
-                    <span :class="{sbarrato: task.done}"> {{ task.text }}</span> <!--{{ task['text']}}-->
+                    <span :class="{sbarrato: task.done}" @click="trueFalse(index)"> {{ task.text }}</span> <!--{{ task['text']}}-->
                     <!--v-on oppure @ per elementi in ascolto-->
                     <button @click="removeTobo(index)">X</button>
                 </li>
